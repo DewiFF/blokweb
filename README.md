@@ -58,6 +58,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
 
+<img src="readme-images/wcag1of5.jpg" width="375px" alt="checklist">
+<img src="readme-images/wcag2of5.jpg" width="375px" alt="checklist">
+<img src="readme-images/wcag3of.jpg" width="375px" alt="checklist">
+<img src="readme-images/wcag4of5.jpg" width="375px" alt="checklist">
+<img src="readme-images/wcag5of5.jpg" width="375px" alt="checklist">
+
+
 </details>
 
 
