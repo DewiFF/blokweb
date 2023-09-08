@@ -60,7 +60,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 <img src="readme-images/wcag1of5.JPG" width="375px" alt="checklist">
 <img src="readme-images/wcag2of5.JPG" width="375px" alt="checklist">
-<img src="readme-images/wcag3of.JPG" width="375px" alt="checklist">
+<img src="readme-images/wcag3of5.JPG" width="375px" alt="checklist">
 <img src="readme-images/wcag4of5.JPG" width="375px" alt="checklist">
 <img src="readme-images/wcag5of5.JPG" width="375px" alt="checklist">
 
