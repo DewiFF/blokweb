@@ -74,14 +74,29 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 <details>
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
-  ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  ### de hele pagina (Home pagina): 
+  <img src="readme-images/schetsh1.JPG" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/schetsh2.JPG" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/schetsh3.JPG" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/schetsh4.JPG" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/schetsh5.JPG" width="375px" alt="breakdown van de hele pagina">
 
-  ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  ### dynamisch deel (klikbare img): 
+  <img src="readme-images/schetsimg.JPG" width="375px" alt="breakdown van een dynamisch deel">
 
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  ### wellicht nog een dynamisch deel (footer dropdown): 
+  <img src="readme-images/schetsfooterdrowpdown.JPG" width="375px" alt="breakdown van nog een dynamisch deel">
+
+  ### de hele pagina (Product pagina): 
+  <img src="readme-images/schetsp1.JPG" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/schetsp2.JPG" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/schetsp3.JPG" width="375px" alt="breakdown van de hele pagina">
+
+  ### dynamisch deel (productinformatie pop-up): 
+  <img src="readme-images/schetsproductinfopopup.JPG" width="375px" alt="breakdown van een dynamisch deel">
+
+  ### wellicht nog een dynamisch deel (beoordelingen pop-up): 
+  <img src="readme-images/schetsbeoordelingen.JPG" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
