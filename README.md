@@ -112,6 +112,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
+Het lastigste vind ik om de lay-out goed te krijgen. Ik merk dat ik zowel flex als grid best wel lastig vind en dat die dingen toepassen op mijn site ingewikkelder is dan de oefeningen erover maken. Verder ben ik ook gewoon nog niet heel ver. Mijn html is nog niet helemaal compleet en de code is over het algemeen nog een beetje rommelig. 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
