@@ -27,8 +27,6 @@
 	--font-size-main-text: 0.875rem;
 	--font-weight-headings: 700;
 	--font-size-price: 1.75rem;
-
-	--border-width: 0.1em;
 }
 
 
@@ -43,31 +41,6 @@ body {
 	color: var(--color-text);
 	font-family: var(--ikea-font);
 	font-size: var(--font-size-main-text);
-}
-
-p::selection {
-	color: var(--color-text-headings);
-	background-color: lightblue;
-}
-
-h1::selection {
-	color: var(--color-text-headings);
-	background-color: lightblue;
-}
-
-h2::selection {
-	color: var(--color-text-headings);
-	background-color: lightblue;
-}
-
-h3::selection {
-	color: var(--color-text-headings);
-	background-color: lightblue;
-}
-
-a::selection {
-	color: var(--color-text-headings);
-	background-color: lightblue;
 }
 
 
@@ -127,34 +100,30 @@ header input {
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr;
 	height: 56px;
-	margin: 16px;
+	margin: 16px
 }
 
-.actions button {
+main button {
 	background-color: var(--color-background);
 	border-style: solid;
 	border-color: var(--color-border-gray);
-	border-width: var(--border-width);
+	border-width: 0.1em;
 	border-top: 0;
 	border-left: 0;
 	border-right: 0;
 	text-align: left;
 }
 
-.actions button:nth-of-type(2) {
+main button:nth-of-type(2) {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 }
 
-.actions img {
-	width: 1.5em;
-	margin-right: .5em;
-}
-
 /* hej! welkom terug */
 .inleiding {
-	margin: 1.25em;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .inleiding h2 {
@@ -213,30 +182,8 @@ header input {
 	list-style: none;
 }
 
-.slaapkamerTekst ul li a img {
-	width: 100%;
-}
-
-.slaapkamerTekst ul li a {
-	border: none;
-}
-
-.slaapkamerTekst a {
-	border-style: solid;
-	border-top: 0;
-	border-left: 0;
-	border-right: 0;
-	border-width: var(--border-width);
-	border-color: var(--color-border-gray);
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
-	padding-bottom: 1em;
-	color: var(--color-buttons-blue);
-}
-
 .slaapkamerTekst img {
-	width: 1.5em;
+	max-width: 100%;
 }
 
 /* Nu bij ikea */
@@ -338,8 +285,9 @@ header input {
 }
 
 .ruimtes li img {
-	height: 19.3em;
-	width: auto;
+	min-width: 14.4em;
+	width: 100%;
+	height: auto;
 }
 
 .ruimtes h3 {
@@ -359,7 +307,6 @@ header input {
 	color: var(--color-text-on-colored-background);
 	background-color: rgb(179, 138, 141);
 	margin: 1.25em;
-	margin-bottom: 2.5em;
 	padding-bottom: 2em;
 }
 
@@ -390,7 +337,8 @@ header input {
 
 /* Onze producten bij jullie thuis (insta posts) */
 .instaPosts {
-	margin: 1.25em;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .instaPosts h2 {
@@ -410,7 +358,7 @@ header input {
 }
 
 .instaPosts li img {
-	height: 30em;
+	height: 325px;
 	width: auto;
 }
 
@@ -431,8 +379,8 @@ header input {
 	margin-bottom: .3em;
 	padding: 1em;
 	display: grid;
-	grid-column: 1;
-	grid-row: 3;
+	grid-column: 1fr;
+	grid-row: 3fr;
 }
 
 .bezorgInfo h3 {
@@ -473,7 +421,7 @@ header input {
 /* meer ideeen en inspiratie */
 .inspiratie h2 {
 	color: var(--color-text-headings);
-	font-size: var(--font-size-price);
+	font-size: 24px;
 	font-weight: 700;
 	padding-left: 20px;
 }
@@ -500,17 +448,6 @@ header input {
 
 .inspiratie img {
 	width: 10.1em;
-}
-
-.inspiratie ul:first-of-type li button {
-	border: none;
-	padding: 1em;
-	border-radius: 3.5em;
-}
-
-.inspiratie ul:last-of-type li button {
-	border: none;
-	background-color: transparent;
 }
 
 /****************/
@@ -550,8 +487,8 @@ footer section:nth-of-type(2) ul {
 	list-style: none;
 	padding: 0;
 	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 4fr;
+	grid-template-columns: 1;
+	grid-template-rows: 4;
 }
 
 footer section:nth-of-type(2) li {
@@ -598,30 +535,10 @@ footer section:nth-of-type(3) img {
 
 	.slaapkamerTekst ul {
 		display: flex;
-		column-gap: 1em;
 	}
 
 	.slaapkamerTekst img {
 		height: 100%;
-	}
-
-	/* informatie over bezorgen etc. */
-	.bezorgInfo {
-		margin: 2em;
-	}
-
-	.bezorgInfo ul {
-		list-style: none;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr 1fr;
-	}
-
-	.bezorgInfo li {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		border-right: 1em;
 	}
 
 }

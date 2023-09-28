@@ -1,0 +1,580 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+    --color-text-headings: rgb(17, 17, 17);
+    --color-background-buttons-black: rgb(17, 17, 17);
+    --color-text: rgb(72, 72, 72);
+    --color-text-on-colored-background: rgb(17, 17, 17);
+    --color-text-on-dark-background: rgb(255, 255, 255);
+    --color-buttons-blue: rgb(0, 88, 163);
+    --color-text-blue: rgb(0, 124, 193);
+    --color-background-gray: rgb(245, 245, 245);
+    --color-background: rgb(255, 255, 255);
+    --color-border-gray: rgb(223, 223, 223);
+
+    --ikea-font: 'Noto Sans', 'Roboto', 'Open Sans';
+    --font-weight-headings: 700;
+    --font-size-main-text: 0.875rem;
+    --font-size-price: 1.75rem;
+}
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: var(--color-text);
+    font-family: var(--ikea-font);
+}
+
+
+/****************/
+/* HEADER */
+/****************/
+header {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+}
+
+/* logo */
+header a:first-of-type {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+/* iconen rechts bovenin */
+header ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+nav {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+nav img {
+    padding-left: 1em;
+    max-width: 40px;
+}
+
+/* zoekbalk */
+header form {
+    grid-area: 2 / 1 / 2 / 5;
+}
+
+header input {
+    width: 100%;
+    height: 50px;
+    padding: 1em;
+    border-radius: 2em;
+    border-style: none;
+    background-color: var(--color-background-gray);
+}
+
+/****************/
+/* MAIN */
+/****************/
+
+/* knoppen postcode en winkel locatie */
+.actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 56px;
+    margin: 16px;
+}
+
+main button {
+    background-color: var(--color-background);
+    border-style: solid;
+    border-color: var(--color-border-gray);
+    border-width: 0.1em;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    text-align: left;
+}
+
+main button:nth-of-type(2) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* breadcrumbs */
+main nav ul:first-of-type {
+    align-items: center;
+    display: flex;
+    list-style: none;
+    padding-left: 1em;
+}
+
+main nav ul:first-of-type li {
+    padding-right: .5em;
+}
+
+main nav ul:first-of-type li a {
+    text-decoration-line: underline;
+    color: var(--color-text-blue);
+}
+
+/* afbeeldingen */
+.afbeeldingen img {
+    width: 23.5em;
+    height: auto;
+}
+
+.afbeeldingen ul {
+    display: flex;
+    overflow-x: scroll;
+    padding: 0;
+    list-style: none;
+}
+
+/* product info */
+.productInfo {
+    margin: 1.25em;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: repeat(5, min-content);
+}
+
+.productInfo h1 {
+    margin: 0;
+    color: var(--color-text-headings);
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.productInfo h2 {
+    margin: 0;
+    font-size: var(--font-size-main-text);
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.productInfo button:first-of-type {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.productInfo p:first-of-type {
+    grid-area: 3 / 1/ 4 / 3;
+    font-size: var(--font-size-price);
+    margin: 0;
+}
+
+.productInfo button:last-of-type {
+    grid-area: 4 / 1 / 5 / 2;
+}
+
+.productInfo img:last-of-type {
+    height: 1.5em;
+    width: auto;
+    grid-area: 5 / 1 / 6 / 2;
+}
+
+.productInfo p:last-of-type {
+    grid-area: 5 / 2 / 6 / 3;
+    font-size: var(--font-size-main-text);
+
+}
+
+.productInfo button img {
+    height: 1.5em;
+    width: auto;
+}
+
+/* Hoe kom je eraan? */
+.hoeKomJeEraan {
+    padding: 1.25em;
+}
+
+.hoeKomJeEraan h2 {
+    color: var(--color-text-headings);
+}
+
+.hoeKomJeEraan h3 {
+    color: var(--color-text-headings);
+}
+
+.hoeKomJeEraan ul {
+    display: grid;
+    padding: 0;
+}
+
+.hoeKomJeEraan li {
+    border-style: solid;
+    border-color: var(--color-border-gray);
+    border-width: 0.06em;
+    border-radius: 0.5em;
+    padding: 1em;
+    list-style: none;
+}
+
+.hoeKomJeEraan a {
+    display: grid;
+    column-gap: 1em;
+    grid-template-columns: 1.5em 1fr 1.5em;
+    grid-template-rows: 2fr;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.hoeKomJeEraan img {
+    width: 1.5em;
+    height: auto;
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+.hoeKomJeEraan h3 {
+    grid-area: 1 / 2 / 2 / 3;
+    margin: 0;
+}
+
+.hoeKomJeEraan p:first-of-type {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.hoeKomJeEraan p:last-of-type {
+    grid-area: 1 / 3 / 3 / 4;
+}
+
+/* Toevoegen aan winkelwagen */
+.toevoegenWinkelwagen {
+    display: flex;
+    justify-content: center;
+}
+
+.toevoegenWinkelwagen button {
+    width: 100%;
+    text-decoration: none;
+    padding: 1em;
+    margin: 1.25em;
+    background-color: var(--color-buttons-blue);
+    color: var(--color-text-on-dark-background);
+    border-radius: 4em;
+    display: flex;
+    justify-content: center;
+}
+
+/* Over het product */
+.overProduct {
+    margin: 1.25em;
+}
+
+.overProduct p:last-of-type {
+    color: var(--color-text-on-dark-background);
+    background-color: var(--color-background-buttons-black);
+    border-width: 0.06em;
+    border-style: solid;
+    border-color: var(--color-background-buttons-black);
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    width: fit-content;
+}
+
+/* Meer info over product (buttons) */
+.meerInfo ul {
+    padding: 1.25em;
+}
+
+.meerInfo li {
+    list-style: none;
+    border-top: 0.06em;
+    border-color: var(--color-border-gray);
+    border-style: solid;
+}
+
+.meerInfo button {
+    display: grid;
+    grid-template-columns: 1fr 1em;
+    width: 100%;
+}
+
+.meerInfo img:last-of-type {
+    width: 5.7em;
+    height: auto;
+}
+
+.meerInfo img:first-of-type {
+    width: 1em;
+    padding-top: 1.25em;
+    height: auto;
+    grid-area: 1/ 2 / 2 / 3;
+}
+
+/* soortgelijke producten */
+.soortgelijkeProducten {
+    margin: 1.25em;
+    margin-bottom: 2.5em;
+}
+
+.soortgelijkeProducten h2 {
+    color: var(--color-text-headings);
+}
+
+.soortgelijkeProducten ul {
+    display: flex;
+    column-gap: 0.625em;
+    overflow-x: scroll;
+    padding: 0;
+}
+
+.soortgelijkeProducten li {
+    display: grid;
+    grid-template-columns: repeat(2, min-content);
+    grid-template-rows: repeat(2, min-content);
+}
+
+.soortgelijkeProducten a {
+    display: grid;
+    grid-template-columns: repeat(2, min-content);
+    grid-template-rows: repeat(5, min-content);
+    width: 8.4em;
+    grid-area: 1 / 1 / 2 / 3;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.soortgelijkeProducten a img:first-of-type {
+    width: 100%;
+    height: auto;
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.soortgelijkeProducten h3:first-of-type {
+    grid-area: 2 / 1 / 3 / 3;
+    margin-bottom: 0;
+    color: var(--color-text-headings);
+}
+
+.soortgelijkeProducten p:first-of-type {
+    grid-area: 3 / 1 / 4 / 3;
+    margin: 0;
+}
+
+.soortgelijkeProducten h3:last-of-type {
+    grid-area: 4 / 1 / 5 / 3;
+    color: var(--color-text-headings);
+}
+
+
+.soortgelijkeProducten a img:last-of-type {
+    width: 5.7em;
+    height: auto;
+    grid-area: 5 / 1 / 6 / 2;
+}
+
+.soortgelijkeProducten p:last-of-type {
+    grid-area: 5 / 2 / 6 / 3;
+    margin-top: 0;
+}
+
+.soortgelijkeProducten button:first-of-type img {
+    width: 3em;
+    border-style: solid;
+    border-width: .5em;
+    border-radius: 2em;
+    border-color: var(--color-buttons-blue);
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.soortgelijkeProducten button:last-of-type img {
+    width: 2em;
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+/* verhaal */
+.verhaal h3 {
+    color: var(--color-text-headings);
+}
+
+.verhaal img {
+    max-width: 100%;
+}
+
+.verhaal article {
+    margin: 1.25em;
+    padding: 2em;
+    background-color: white;
+    position: relative;
+    bottom: 6em;
+    border-width: 0;
+    border-bottom: .1em;
+    border-style: solid;
+    border-color: var(--color-border-gray);
+}
+
+/* materiaal */
+.materiaal {
+    margin: 1.25em;
+    border-width: 0;
+    border-bottom: .1em;
+    border-style: solid;
+    border-color: var(--color-border-gray);
+}
+
+.materiaal h3 {
+    color: var(--color-text-headingsP);
+}
+
+/* Gezien in */
+.gezienIn {
+    margin: 1.25em;
+}
+
+.gezienIn img {
+    width: 10.1em;
+}
+
+/* Je laatst bekeken producten */
+.laatstBekeken {
+    margin: 1.25em;
+}
+
+.laatstBekeken ul {
+    padding: 0;
+    display: flex;
+    overflow-x: scroll;
+
+}
+
+.laatstBekeken li {
+    list-style: none;
+}
+
+.laatstBekeken img {
+    width: 3.7em;
+}
+
+
+
+/****************/
+/* FOOTER */
+/****************/
+
+footer {
+    background-color: var(--color-background-gray);
+    padding: 20px;
+}
+
+/* word IKEA family lid */
+footer section:first-of-type h3 {
+    color: var(--color-text-headings);
+}
+
+footer section:first-of-type a {
+    display: flex;
+    align-items: flex-start;
+    color: var(--color-text);
+}
+
+footer section:first-of-type a:last-of-type {
+    text-decoration: none;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 2.5em;
+    background-color: var(--color-background-buttons-black);
+    color: var(--color-text-on-dark-background);
+    border-radius: 3em;
+    width: fit-content;
+}
+
+/* dropdown */
+
+footer section:nth-of-type(2) ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr;
+}
+
+footer section:nth-of-type(2) li {
+    border-style: solid;
+    border-color: var(--color-border-gray);
+    border-left: 0;
+    border-right: 0;
+
+}
+
+footer section:nth-of-type(2) button {
+    background-color: var(--color-background-gray);
+    font-size: .875em;
+    padding: 2em;
+    padding-left: 0;
+    border-width: 0;
+}
+
+/* icoontjes */
+
+footer section:nth-of-type(3) ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+footer section:nth-of-type(3) li {
+    margin-right: 1.2em;
+}
+
+footer section:nth-of-type(3) img {
+    width: 1.5em;
+}
+
+/*********************/
+/* vanaf 600px */
+/*********************/
+@media (min-width: 600px) {
+
+    .verhaal img {
+        padding: 1.25em;
+        width: 100%;
+        margin-left: -10em;
+    }
+
+    .verhaal article {
+        margin: 1.25em;
+        padding: 2em;
+        background-color: white;
+        position: relative;
+        bottom: 6em;
+        border-width: 0;
+        border-bottom: .1em;
+        border-style: solid;
+        border-color: var(--color-border-gray);
+    }
+
+    /* materiaal */
+    .materiaal {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: min-content 1fr;
+    }
+
+    .materiaal h3 {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .materiaal p {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+}

@@ -6,40 +6,42 @@
 	<meta name="author" content="Dewi Francis">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Ikea</title>
+	<title>Ikea Nederland</title>
 
 	<link href="styles/style.css" rel="stylesheet">
-	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+	<link rel="icon" type="image/svg+xml" href="images/ikealogo.svg">
 </head>
 
 <body>
 
 	<header>
 
+		<h1 hidden>IKEA Nederland | Home</h1>
+
 		<!-- Ikea logo -->
 		<a href="index.html">
-			<img src="images/ikealogo.svg" alt="Ikea logo" />
+			<img src="images/ikealogo.svg" alt="Ikea logo">
 		</a>
 		<nav>
 			<ul>
 				<li><a href=#>
-						<img src="images/accounticon.png" alt="account" />
+						<img src="images/accounticon.png" alt="account">
 					</a></li>
 				<li><a href=#>
-						<img src="images/favoicon.png" alt="favorieten" />
+						<img src="images/favoicon.png" alt="favorieten">
 					</a></li>
 				<li><a href=#>
-						<img src="images/winkelmandicon.png" alt="winkelwagen" />
+						<img src="images/winkelmandicon.png" alt="winkelwagen">
 					</a></li>
 				<li><a href="#">
-						<img src="images/hamburgericon.png" alt="hamburger menu" />
+						<img src="images/hamburgericon.png" alt="hamburger menu">
 					</a></li>
 			</ul>
 		</nav>
 
 		<!-- zoekbalk -->
 		<form role="search" action="#">
-			<input type="search" name="search" id="search" placeholder="Waar ben je naar op zoek?" autocomplete="off"
+			<input type="search" name="search" placeholder="Waar ben je naar op zoek?" autocomplete="off"
 				aria-label="zoeken">
 		</form>
 
@@ -49,12 +51,17 @@
 
 		<!-- postcode en winkel locatie knoppen -->
 		<p class="actions">
-			<button type="show">Vul je postcode in</button>
-			<button type="show">Amsterdam</button>
+			<button type="button">
+				<img src="images/leveringIcon.jpg" alt="vrachtwagen icon">
+				Vul je postcode in
+			</button>
+			<button type="button">
+				<img src="images/winkelIcon.jpg" alt="winkel icon">
+				Amsterdam</button>
 		</p>
 
 		<!-- section 1 / inleidings tekstje -->
-		<section>
+		<section class="inleiding">
 			<h2>
 				Hej! Welkom terug
 			</h2>
@@ -66,15 +73,15 @@
 		</section>
 
 		<!-- section 2 / onlangs bekeken -->
-		<section>
+		<section class="onlangsBekeken">
 			<h2>
 				Onlangs bekeken producten
 			</h2>
 
 			<ul>
 				<li>
-					<a href="#">
-						<img src="images/pokal.jpg" alt="POKAL glas" />
+					<a href="product.html">
+						<img src="images/pokal.jpg" alt="POKAL glas">
 						<h3>POKAL</h3>
 						<p>Glas</p>
 						<h3>€0.79</h3>
@@ -82,8 +89,8 @@
 				</li>
 
 				<li>
-					<a href="#">
-						<img src="images/pokal.jpg" alt="POKAL glas" />
+					<a href="product.html">
+						<img src="images/pokal.jpg" alt="POKAL glas">
 						<h3>POKAL</h3>
 						<p>Glas</p>
 						<h3>€0.79</h3>
@@ -91,8 +98,8 @@
 				</li>
 
 				<li>
-					<a href="#">
-						<img src="images/pokal.jpg" alt="POKAL glas" />
+					<a href="product.html">
+						<img src="images/pokal.jpg" alt="POKAL glas">
 						<h3>POKAL</h3>
 						<p>Glas</p>
 						<h3>€0.79</h3>
@@ -100,8 +107,8 @@
 				</li>
 
 				<li>
-					<a href="#">
-						<img src="images/pokal.jpg" alt="POKAL glas" />
+					<a href="product.html">
+						<img src="images/pokal.jpg" alt="POKAL glas">
 						<h3>POKAL</h3>
 						<p>Glas</p>
 						<h3>€0.79</h3>
@@ -112,7 +119,7 @@
 		</section>
 
 		<!-- section 3 / tekst over slaapkamer -->
-		<section>
+		<section class="slaapkamerTekst">
 			<h2>Beter slapen in een opgeruimde slaapkamer</h2>
 
 			<p>Laten we het voor iedereen makkelijker maken om goed te slapen. Weet je wat helpt? Een opgeruimde kamer
@@ -120,55 +127,62 @@
 				rondslingerende kledingstukken tegen te gaan. Nu tijdelijk met IKEA Family korting op allerlei
 				KOMPLEMENT lades en andere KOMPLEMENT kastinrichting.</p>
 
-			<a href="#">
-				<img src="images/broekhanger.jpg" alt="broekhanger" />
-			</a>
+			<ul>
+				<li>
+					<a href="product.html">
+						<img src="images/broekhanger.jpg" alt="broekhanger">
+					</a>
+				</li>
+				<li>
+					<a href="product.html">
+						<img src="images/kastinrichting.jpg" alt="kastinrichting">
+					</a>
+				</li>
+			</ul>
 
-			<a href="#">
-				<img src="images/kastinrichting.jpg" alt="kastinrichting" />
+			<a href="product.html">Bekijk PAX kledingkasten
+				<img src="images/pijlRechts2.jpg" alt="pijl naar rechts">
 			</a>
-
-			<a href="#">Bekijk PAX kledingkasten</a>
 		</section>
 
 		<!-- section 4 / Nu bij ikea -->
-		<section>
+		<section class="nuBijIkea">
 			<h2>Nu bij IKEA</h2>
 			<ul>
 				<li>
 					<a href="#">
-						<img src="images/events.jpg" alt="" />
+						<img src="images/events.jpg" alt="Meisje bij een ikea kast">
 						<h3>Gratis events t/m 17 september</h3>
 						<p>ghlvghkmv hyjfcmjhfcfkrdr ykfgh mvghrzjyshf dcryktfmv cfjktufjv hgc fdku tftjghmcv fcjhg
 							cngcv
 							jfydjcfgn fjcjn</p>
 
-						<a href=#>
-							<img src="images/pijlRechts.jpg" alt="pijl naar rechts" />
+						<a href="#">
+							<img src="images/pijlRechts.jpg" alt="pijl naar rechts">
 						</a>
 					</a>
 				</li>
 				<li>
 					<a href="#">
-						<img src="images/werkplek.jpg" alt="" />
+						<img src="images/werkplek.jpg" alt="ikea bureau met donut">
 						<h3>Gratis events t/m 17 september</h3>
 						<p>ghlvghkmv hyjfcm jhfcfkr drykfgh mvghrzjyshfdcr yktfmvc fjktufjvhgc fdku tftjghmcv fcjhg
 							cngcv
 							jfydjcfgn fjcjn</p>
-						<a href=#>
-							<img src="images/pijlRechts.jpg" alt="pijl naar rechts" />
+						<a href="#">
+							<img src="images/pijlRechts.jpg" alt="pijl naar rechts">
 						</a>
 					</a>
 				</li>
 				<li>
 					<a href="#">
-						<img src="images/verlaagdeprijs.jpg" alt="" />
+						<img src="images/verlaagdeprijs.jpg" alt="nieuwe verlaagde prijs">
 						<h3>Gratis events t/m 17 september</h3>
 						<p>ghlvghkmv hyjfcmj hfcfkrdry kfghmv ghrzjy shfdc ryktfmvc fjkt ufjvhgc fdku tftjghmcv fcjhg
 							cngcv
 							jfydjcfgn fjcjn</p>
-						<a href=#>
-							<img src="images/pijlRechts.jpg" alt="pijl naar rechts" />
+						<a href="#">
+							<img src="images/pijlRechts.jpg" alt="pijl naar rechts">
 						</a>
 					</a>
 				</li>
@@ -176,33 +190,33 @@
 		</section>
 
 		<!-- section 5 / ruimtes -->
-		<section>
+		<section class="ruimtes">
 			<h2>Ruimtes</h2>
 			<ul>
 				<li>
 					<a href="#">
-						<img src="images/slaapkamer.jpg" alt="" />
+						<img src="images/slaapkamer.jpg" alt="slaapkamer">
 						<h3>Slaapkamer</h3>
 					</a>
 				</li>
 
 				<li>
 					<a href="#">
-						<img src="images/kinderkamer.jpg" alt="" />
+						<img src="images/kinderkamer.jpg" alt="kinderkamer">
 						<h3>Kinderkamer</h3>
 					</a>
 				</li>
 
 				<li>
 					<a href="#">
-						<img src="images/woonkamer.jpg" alt="" />
+						<img src="images/woonkamer.jpg" alt="woonkamer">
 						<h3>Woonkamer</h3>
 					</a>
 				</li>
 
 				<li>
 					<a href="#">
-						<img src="images/slaapkamer.jpg" alt="" />
+						<img src="images/slaapkamer.jpg" alt="slaapkamer">
 						<h3>Slaapkamer</h3>
 					</a>
 				</li>
@@ -211,47 +225,53 @@
 		</section>
 
 		<!-- secton 6 / ikea kreativ tekst -->
-		<section>
-			<img src="images/ikeakreativ.jpg" alt="" />
-			<h2>Ontwerp en creëer je droomhuis in 3D met IKEA Kreativ</h2>
-			<p>Scan je eigen kamer in de IKEA App en richt deze in met 3D producten op schaal. Of oefen eerst met één
-				van de 50+ interactieve showrooms. Wissel, draai en verschuif je meubels zonder het zware werk (voor nu)
-				en creëer je droomhuis in 3D.</p>
-			<p>Start met ontwerpen in de IKEA app of op desktop via de website.</p>
-			<a href="#">Start met ontwerpen</a>
+		<section class="ikeaKreativ">
+			<h2 hidden>IKEA Kreativ</h2>
+			<img src="images/ikeakreativ.jpg" alt="mobiel waar ikea kreativ op staat">
+			<article>
+				<h2>Ontwerp en creëer je droomhuis in 3D met IKEA Kreativ</h2>
+				<p>Scan je eigen kamer in de IKEA App en richt deze in met 3D producten op schaal. Of oefen eerst met
+					één
+					van de 50+ interactieve buttonrooms. Wissel, draai en verschuif je meubels zonder het zware werk
+					(voor
+					nu)
+					en creëer je droomhuis in 3D.</p>
+				<p>Start met ontwerpen in de IKEA app of op desktop via de website.</p>
+				<a href="#">Start met ontwerpen</a>
+			</article>
 		</section>
 
 		<!-- section 7 / insta posts -->
-		<section>
+		<section class="instaPosts">
 			<h2>Onze producten bij jullie thuis</h2>
 			<p>Ideeën op basis van je recent bekeken producten</p>
 
 			<ul>
 				<li>
 					<a href="">
-						<img src="images/insta2.jpg" alt="" />
+						<img src="images/insta2.jpg" alt="zwart bureau met ronde spiegel erboven">
 					</a>
 				</li>
 				<li>
 					<a href="">
-						<img src="images/insta1.jpg" alt="" />
+						<img src="images/insta1.jpg" alt="stoel met bijzettafeltje">
 					</a>
 				</li>
 				<li>
 					<a href="">
-						<img src="images/insta3.jpg" alt="" />
+						<img src="images/insta3.jpg" alt="zwarte kast">
 					</a>
 				</li>
 				<li>
 					<a href="">
-						<img src="images/insta4.jpg" alt="" />
+						<img src="images/insta4.jpg" alt="lange kast">
 					</a>
 				</li>
 			</ul>
 		</section>
 
 		<!-- section 8 / informatie over bezorgen etc.-->
-		<section>
+		<section class="bezorgInfo">
 			<ul>
 				<li>
 					<h3>Bestellen & ophalen</h3>
@@ -278,7 +298,7 @@
 
 
 		<!-- sectie 9 / veiligheidswaarschuwing -->
-		<section>
+		<section class="waarschuwing">
 			<h2>Belangrijke veiligheidswaarschuwing en terugroepactie</h2>
 			<ul>
 				<li><a href="#">Uitbreiding belangrijke veiligheidswaarschuwing en terugroepactie voor reparatie</a> -
@@ -293,80 +313,170 @@
 		</section>
 
 		<!-- section 10 / inspiratie -->
-		<section>
+		<section class="inspiratie">
 			<h2>Meer ideeën en inspiratie</h2>
 			<ul>
 				<li>
-					<button type="show">Allemaal</button>
+					<button type="button">Allemaal</button>
 				</li>
 				<li>
-					<button type="show">Slaapkamer</button>
+					<button type="button">Slaapkamer</button>
 				</li>
 				<li>
-					<button type="show">Woonkamer</button>
+					<button type="button">Woonkamer</button>
 				</li>
 				<li>
-					<button type="show">Keuken</button>
+					<button type="button">Keuken</button>
 				</li>
 				<li>
-					<button type="show">Werkplek</button>
+					<button type="button">Werkplek</button>
 				</li>
 				<li>
-					<button type="show">Tuin & balkon</button>
+					<button type="button">Tuin & balkon</button>
 				</li>
 				<li>
-					<button type="show">Badkamer</button>
+					<button type="button">Badkamer</button>
 				</li>
 				<li>
-					<button type="show">Kinderkamer</button>
+					<button type="button">Kinderkamer</button>
 				</li>
 				<li>
-					<button type="show">Eetkamer</button>
+					<button type="button">Eetkamer</button>
 				</li>
 				<li>
-					<button type="show">Hal</button>
+					<button type="button">Hal</button>
 				</li>
 				<li>
-					<button type="show">Wasruimte</button>
+					<button type="button">Wasruimte</button>
 				</li>
 				<li>
-					<button type="show">Accessoires</button>
+					<button type="button">Accessoires</button>
 				</li>
 			</ul>
 			<ul>
 				<li>
-					<button type="show">
-						<img src="images/inspiratie1.jpg" />
+					<button type="button">
+						<img src="images/inspiratie1.jpg" alt="bureau met lade kast en ronde spiegel">
 					</button>
 				</li>
 				<li>
-					<button type="show">
-						<img src="images/inspiratie2.jpg" />
+					<button type="button">
+						<img src="images/inspiratie2.jpg" alt="kast">
 					</button>
 				</li>
 				<li>
-					<button type="show">
-						<img src="images/inspiratie3.jpg" />
+					<button type="button">
+						<img src="images/inspiratie3.jpg" alt="monitor standaard met la en spulletjes erin">
 					</button>
 				</li>
 				<li>
-					<button type="show">
-						<img src="images/inspiratie4.jpg" />
+					<button type="button">
+						<img src="images/inspiratie4.jpg" alt="kast">
 					</button>
 				</li>
 				<li>
-					<button type="show">
-						<img src="images/inspiratie5.jpg" />
+					<button type="button">
+						<img src="images/inspiratie5.jpg" alt="stoel met gordijnen er om heen">
 					</button>
 				</li>
 			</ul>
 		</section>
 
-		<button type="show">^</button>
+		<button type="button">^</button>
 
 	</main>
 
 	<footer>
+
+		<!-- section 1 / word IKEA Family lid -->
+		<section>
+			<h3> Word IKEA Family lid </h3>
+			<p>Als IKEA Family lid profiteer je van heel veel voordelen, zoals kortingen op veel producten en gratis
+				toegang
+				tot workshops en evenementen.</p>
+			<a href="#">Lees meer >></a>
+			<a href="#">Word lid of log in</a>
+		</section>
+
+		<!--section 2 / dropdowns -->
+		<section>
+			<ul>
+				<li>
+					<button type="button">
+						Klantenservice
+					</button>
+				</li>
+				<li>
+					<button type="button">
+						Over IKEA
+					</button>
+				</li>
+				<li>
+					<button type="button">
+						Winkelen bij IKEA
+					</button>
+				</li>
+				<li>
+					<button type="button">
+						IKEA Family & Business
+					</button>
+				</li>
+			</ul>
+		</section>
+
+		<!-- section 3 / icoontjes -->
+		<section>
+			<ul>
+				<li><a href=#>
+						<img src="images/facebook.jpg" alt="facebook">
+					</a>
+				</li>
+				<li><a href=#>
+						<img src="images/insta.jpg" alt="instagram">
+					</a>
+				</li>
+				<li><a href=#>
+						<img src="images/pinterest.jpg" alt="pinterest">
+					</a>
+				</li>
+				<li><a href="#">
+						<img src="images/youtube.jpg" alt="youtube">
+					</a>
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<a href="#">
+						<img src="images/ideal.jpg" alt="ideal">
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/mastercard.jpg" alt="mastercard">
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/visa.jpg" alt="visa">
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/klarna.jpg" alt="klarna">
+					</a>
+				</li>
+			</ul>
+		</section>
+
+		<!-- section 4 / land & taal wijzigen -->
+		<section>
+			<a href="#">Wijzig land</a>
+			<button type="button">
+				Nederlands
+			</button>
+
+		</section>
+
 
 	</footer>
 

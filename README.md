@@ -160,7 +160,7 @@ Het lastigste vind ik om de lay-out goed te krijgen. Ik merk dat ik zowel flex a
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
+  - Gebruik maken van Custom Properties
   - punt 2
   - nog een punt
 - ...
