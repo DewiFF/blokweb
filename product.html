@@ -15,40 +15,72 @@
 <body>
 
     <header>
-        <!-- Ikea logo -->
-        <a href="index.html">
-            <img src="images/ikealogo.svg" alt="Ikea logo" />
+
+        <h1 hidden>IKEA Nederland | Home pagina</h1>
+        <!-- Link bovenin de pagina -->
+        <a href="#">
+            <img src="images/retourIcon.png" alt="pijl in de vorm van een hart">
+            365 dagen retourneren!
         </a>
-        <nav>
+
+        <!-- Navigatie balk -->
+        <nav class="navbar">
+            <!-- Ikea logo -->
+            <a href="index.html">
+                <img src="images/ikealogo.svg" alt="Ikea logo">
+            </a>
             <ul>
-                <li><a href=#>
-                        <img src="images/accounticon.png" alt="account" />
-                    </a></li>
-                <li><a href=#>
-                        <img src="images/favoicon.png" alt="favorieten" />
-                    </a></li>
-                <li><a href=#>
-                        <img src="images/winkelmandicon.png" alt="winkelwagen" />
-                    </a></li>
-                <li><a href="#">
-                        <img src="images/hamburgericon.png" alt="hamburger menu" />
-                    </a></li>
+                <li>
+                    <a href=#>
+                        <img src="images/accounticon.png" alt="account">
+                    </a>
+                </li>
+
+                <li>
+                    <a href=#>
+                        <img src="images/favoicon.png" alt="favorieten">
+                    </a>
+                </li>
+
+                <li>
+                    <a href=#>
+                        <img src="images/winkelmandicon.png" alt="winkelwagen">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img src="images/hamburgericon.png" alt="hamburger menu">
+                    </a>
+                </li>
             </ul>
         </nav>
 
         <!-- zoekbalk -->
         <form role="search" action="#">
-            <input type="search" name="search" id="search" placeholder="Waar ben je naar op zoek?" autocomplete="off"
+            <img src="images/vergrootglasIcon.png" alt="vergrootglas">
+            <input type="search" name="search" placeholder="Waar ben je naar op zoek?" autocomplete="off"
                 aria-label="zoeken">
+            <button type="button">
+                <img src="images/cameraIcon.png" alt="camera icon">
+            </button>
         </form>
+
     </header>
 
     <main>
 
         <!-- postcode en winkel locatie knoppen -->
         <p class="actions">
-            <button type="show">Vul je postcode in</button>
-            <button type="show">Amsterdam</button>
+            <button type="button">
+                <img src="images/leveringIcon.jpg" alt="vrachtwagen icon">
+                Vul je postcode in
+            </button>
+
+            <button type="button">
+                <img src="images/winkelIcon.jpg" alt="winkel icon">
+                Amsterdam
+            </button>
         </p>
 
         <!-- breadcrumbs -->
@@ -69,41 +101,91 @@
             </ul>
         </nav>
 
-        <!-- section 1 / afbeeldngen -->
+        <!-- section 1 / afbeeldngen (carousel gemaakt met hulp van bron: https://www.youtube.com/watch?v=vnQNb9fXP9o ) -->
         <section class="afbeeldingen">
+
+            <h2 hidden>Product afbeeldingen</h2>
+
             <ul>
                 <li>
-                    <img src="images/kast1.jpeg" alt="" />
+                    <img id="img1" src="images/kast1.jpeg" alt="een witte SONGESAND kast">
                 </li>
                 <li>
-                    <img src="images/kast2.jpeg" alt="" />
+                    <img id="img2" src="images/kast2.jpeg" alt="een witte SONGESAND kast">
                 </li>
                 <li>
-                    <img src="images/kast3.jpeg" alt="" />
+                    <img id="img3" src="images/kast3.jpeg" alt="indeling witte SONGESAND kast">
                 </li>
                 <li>
-                    <img src="images/kast4.jpg" alt="" />
+                    <img id="img4" src="images/kast4.jpg" alt="zwarte handvaten SONGESAND kast">
                 </li>
                 <li>
-                    <img src="images/kastAfmetingen.jpg" alt="" />
+                    <img id="img5" src="images/kastAfmetingen.jpg" alt="Afmetingen SONGESAND kast">
                 </li>
             </ul>
+
+            <ul>
+                <li>
+                    <a href="#img1">
+                        <img src="images/dot.png" alt="1e afbeelding">
+                    </a>
+                </li>
+                <li>
+                    <a href="#img2">
+                        <img src="images/dot.png" alt="2e afbeelding">
+                    </a>
+                </li>
+                <li>
+                    <a href="#img3">
+                        <img src="images/dot.png" alt="3e afbeelding">
+                    </a>
+                </li>
+                <li>
+                    <a href="#img4">
+                        <img src="images/dot.png" alt="4e afbeelding">
+                    </a>
+                </li>
+                <li>
+                    <a href="#img5">
+                        <img src="images/dot.png" alt="5e afbeelding">
+                    </a>
+                </li>
+            </ul>
+
+
         </section>
 
         <!-- section 2 / product info -->
         <section class="productInfo">
-            <h1>SONGESAND</h1>
-            <h2>Kledingkast, wit, </h2>
-            <button type="show">
-                120x60x191 cm
-            </button>
-            <p> €279.- </p>
-            <button type="show">
-                <img src="images/reviewSterren.jpg" alt="" />
-                <p>(62)</p>
-            </button>
-            <img src="images/info.jpg" alt="" />
-            <p>Losse kledingopbergers die je helpen de binnenkant van de kast in te richten; worden apart verkocht.</p>
+            <ul>
+                <li>
+                    <h1>SONGESAND</h1>
+                </li>
+
+                <li>
+                    <h2>Kledingkast, wit, </h2>
+                    <button type="button">
+                        120x60x191 cm
+                    </button>
+                </li>
+
+                <li>
+                    <p> €279.- </p>
+                </li>
+
+                <li>
+                    <button type="button">
+                        <img src="images/reviewSterren.jpg" alt="4,5 sterren review">
+                        (62)
+                    </button>
+                </li>
+
+                <li>
+                    <img src="images/info.jpg" alt="info">
+                    <p>Losse kledingopbergers die je helpen de binnenkant van de kast in te richten worden apart
+                        verkocht.</p>
+                </li>
+            </ul>
         </section>
 
 
@@ -113,7 +195,7 @@
             <ul>
                 <li>
                     <a href=#>
-                        <img src="images/leveringIcon.jpg" alt="" />
+                        <img src="images/leveringIcon.jpg" alt="levering">
                         <h3>Levering</h3>
                         <p>Vul je postcode in en bekijk de beschikbaarheid voor bezorging.</p>
                         <p> > </p>
@@ -121,7 +203,7 @@
                 </li>
                 <li>
                     <a href="#">
-                        <img src="images/winkelIcon.jpg" alt="" />
+                        <img src="images/winkelIcon.jpg" alt="winkel">
                         <h3>In de winkel</h3>
                         <p>Bekijk de winkelvoorraad.</p>
                         <p> > </p>
@@ -130,9 +212,18 @@
             </ul>
         </section>
 
-        <!-- section 4 / toevoegen aan winkelwagen -->
+        <!-- section 4 / aantal selecteren (met hulp van bron: https://chat.openai.com) -->
+        <Section class="aantalSelecteren">
+            <h2 hidden>selecteer aantal</h2>
+            <button class="decrement-button">-</button>
+            <input type="number" class="quantity" value="1" min="1">
+            <button class="increment-button">+</button>
+        </Section>
+
+        <!-- section 5 / toevoegen aan winkelwagen -->
         <section class="toevoegenWinkelwagen">
-            <button type="show">Voeg toe aan winkelwagen</button>
+            <h2 hidden>voeg toe aan winkelwagen</h2>
+            <button type="button">Voeg toe aan winkelwagen</button>
         </section>
 
         <!-- section 5 / over het product -->
@@ -146,28 +237,33 @@
 
         <!-- section 6 / meer info over product (buttons) -->
         <section class="meerInfo">
+
+            <h2 hidden>meer informatie over het product</h2>
+
             <ul>
 
                 <li>
-                    <button type="show">
-                        <h3>Productinformatie</h3>
-                        <img src="images/pijlRechts2.jpg" alt="" />
+                    <button type="button">
+                        Productinformatie
+                        <img src="images/pijlRechts2.jpg" alt="pijl naar rechts">
                     </button>
                 </li>
 
                 <li>
-                    <button type="show">
-                        <h3>Afmetingen</h3>
-                        <img src="images/pijlRechts2.jpg" alt="" />
+                    <button type="button">
+                        Afmetingen
+                        <img src="images/pijlRechts2.jpg" alt="pijl naar rechts">
                     </button>
                 </li>
 
                 <li>
-                    <button type="show">
-                        <h3>Reviews</h3>
-                        <img src="images/pijlRechts2.jpg" alt="" />
-                        <img src="images/reviewSterren.jpg" alt="" />
-                        <p>(62)</p>
+                    <button type="button">
+                        Reviews
+
+                        <img src="images/reviewSterren.jpg" alt="4,5 sterren review">
+                        (62)
+
+                        <img src="images/pijlRechts2.jpg" alt="pijl naar rechts">
                     </button>
                 </li>
 
@@ -183,73 +279,109 @@
             <ul>
                 <li>
                     <a href="product.html">
-                        <img src="images/pokal.jpg" alt="POKAL glas" />
+
+                        <img src="images/pokal.jpg" alt="POKAL glas">
+
                         <h3>POKAL</h3>
+
                         <p>Glas</p>
+
                         <h3>€0.79</h3>
-                        <img src="images/reviewSterren.jpg" alt="" />
-                        <p>(62)</p>
+
+                        <p>
+                            <img src="images/reviewSterren.jpg" alt="4,5 sterren review">
+                            (62)
+                        </p>
+
                     </a>
-                    <button type="show">
-                        <img src="images/winkelmandIcon2.jpg" />
+
+                    <button type="button">
+                        <img src="images/winkelmandIcon2.jpg" alt="winkelmandje">
                     </button>
 
-                    <button type="show">
-                        <img src="images/favoicon.png" />
+                    <button type="button">
+                        <img src="images/favoicon.png" alt="voeg toe aan favorieten">
                     </button>
                 </li>
 
                 <li>
                     <a href="product.html">
-                        <img src="images/pokal.jpg" alt="POKAL glas" />
+
+                        <img src="images/pokal.jpg" alt="POKAL glas">
+
                         <h3>POKAL</h3>
+
                         <p>Glas</p>
+
                         <h3>€0.79</h3>
-                        <img src="images/reviewSterren.jpg" alt="" />
-                        <p>(62)</p>
+
+                        <p>
+                            <img src="images/reviewSterren.jpg" alt="4,5 sterren review">
+                            (62)
+                        </p>
+
                     </a>
-                    <button type="show">
-                        <img src="images/winkelmandIcon2.jpg" />
+
+                    <button type="button">
+                        <img src="images/winkelmandIcon2.jpg" alt="winkelmandje">
                     </button>
 
-                    <button type="show">
-                        <img src="images/favoicon.png" />
+                    <button type="button">
+                        <img src="images/favoicon.png" alt="voeg toe aan favorieten">
                     </button>
                 </li>
 
                 <li>
                     <a href="product.html">
-                        <img src="images/pokal.jpg" alt="POKAL glas" />
+
+                        <img src="images/pokal.jpg" alt="POKAL glas">
+
                         <h3>POKAL</h3>
+
                         <p>Glas</p>
+
                         <h3>€0.79</h3>
-                        <img src="images/reviewSterren.jpg" alt="" />
-                        <p>(62)</p>
+
+                        <p>
+                            <img src="images/reviewSterren.jpg" alt="4,5 sterren review">
+                            (62)
+                        </p>
+
                     </a>
-                    <button type="show">
-                        <img src="images/winkelmandIcon2.jpg" />
+
+                    <button type="button">
+                        <img src="images/winkelmandIcon2.jpg" alt="winkelmandje">
                     </button>
 
-                    <button type="show">
-                        <img src="images/favoicon.png" />
+                    <button type="button">
+                        <img src="images/favoicon.png" alt="voeg toe aan favorieten">
                     </button>
                 </li>
 
                 <li>
                     <a href="product.html">
-                        <img src="images/pokal.jpg" alt="POKAL glas" />
+
+                        <img src="images/pokal.jpg" alt="POKAL glas">
+
                         <h3>POKAL</h3>
+
                         <p>Glas</p>
+
                         <h3>€0.79</h3>
-                        <img src="images/reviewSterren.jpg" alt="" />
-                        <p>(62)</p>
+
+                        <p>
+                            <img src="images/reviewSterren.jpg" alt="4,5 sterren review">
+                            (62)
+                        </p>
+
                     </a>
-                    <button type="show">
-                        <img src="images/winkelmandIcon2.jpg" />
+
+                    <button type="button">
+                        <img src="images/winkelmandIcon2.jpg" alt="winkelmandje">
                     </button>
 
-                    <button type="show">
-                        <img src="images/favoicon.png" />
+                    <button type="button">
+                        <img src="images/favoicon.png" alt="voeg toe aan favorieten">
                     </button>
                 </li>
 
@@ -258,7 +390,8 @@
 
         <!-- section 8 / verhaal -->
         <section class="verhaal">
-            <img src="images/kast4.jpg" alt="" />
+            <h2 hidden> Verhaal </h2>
+            <img src="images/kast4.jpg" alt="Zwarte handvaten op SONGESAND kast">
             <article>
                 <h2>Verhaal</h2>
                 <h3>Onze visie op hout</h3>
@@ -273,7 +406,7 @@
                     zijn er
                     trots op dat we dit doel ook echt hebben bereikt en dat tegenwoordig meer dan
                 </p>
-                <button type="show">
+                <button type="button">
                     Meer informatie
                 </button>
             </article>
@@ -293,7 +426,7 @@
         <!-- section 10 / Gezien in -->
         <section class="gezienIn">
             <h2>Gezien in</h2>
-            <img src="images/gezienIn.jpg" alt="" />
+            <img src="images/gezienIn.jpg" alt="SONGESAND kast in een ingerichte ruimte voor een donkergroene muur">
         </section>
 
         <!-- section 11 / Laatst bekeken producten -->
@@ -304,38 +437,38 @@
 
                 <li>
                     <a href=#>
-                        <img src="images/pokal.jpg" alt="" />
+                        <img src="images/pokal.jpg" alt="Pokal glas">
                     </a>
                 </li>
 
                 <li>
                     <a href=#>
-                        <img src="images/pokal.jpg" alt="" />
+                        <img src="images/pokal.jpg" alt="Pokal Glas">
                     </a>
                 </li>
 
                 <li>
                     <a href=#>
-                        <img src="images/pokal.jpg" alt="" />
+                        <img src="images/pokal.jpg" alt="Pokal glas">
                     </a>
                 </li>
 
                 <li>
                     <a href=#>
-                        <img src="images/pokal.jpg" alt="" />
+                        <img src="images/pokal.jpg" alt="Pokal glas">
                     </a>
                 </li>
 
                 <li>
                     <a href=#>
-                        <img src="images/pokal.jpg" alt="" />
+                        <img src="images/pokal.jpg" alt="Pokal glas">
                     </a>
                 </li>
 
             </ul>
         </section>
 
-        <button type="show">^</button>
+        <button id="terugNaarBoven" class="terugNaarBoven" type="button">Terug naar boven</button>
 
     </main>
 
@@ -355,23 +488,31 @@
         <section>
             <ul>
                 <li>
-                    <button type="show">
+                    <h2 hidden> Klantenservice </h2>
+                    <button type="button">
                         Klantenservice
+                        <img src="images/dropdownButton.png" alt="dropdown">
                     </button>
                 </li>
                 <li>
-                    <button type="show">
+                    <h2 hidden> Over IKEA </h2>
+                    <button type="button">
                         Over IKEA
+                        <img src="images/dropdownButton.png" alt="dropdown">
                     </button>
                 </li>
                 <li>
-                    <button type="show">
+                    <h2 hidden> Winkelen bij IKEA </h2>
+                    <button type="button">
                         Winkelen bij IKEA
+                        <img src="images/dropdownButton.png" alt="dropdown">
                     </button>
                 </li>
                 <li>
-                    <button type="show">
+                    <h2 hidden> IKEA Family & Business</h2>
+                    <button type="button">
                         IKEA Family & Business
+                        <img src="images/dropdownButton.png" alt="dropdown">
                     </button>
                 </li>
             </ul>
@@ -379,43 +520,46 @@
 
         <!-- section 3 / icoontjes -->
         <section>
+            <h2 hidden> Social media </h2>
             <ul>
                 <li><a href=#>
-                        <img src="images/facebook.jpg" alt="" />
+                        <img src="images/facebook.jpg" alt="facebook">
                     </a>
                 </li>
                 <li><a href=#>
-                        <img src="images/insta.jpg" alt="" />
+                        <img src="images/insta.jpg" alt="instagram">
                     </a>
                 </li>
                 <li><a href=#>
-                        <img src="images/pinterest.jpg" alt="" />
+                        <img src="images/pinterest.jpg" alt="pinterest">
                     </a>
                 </li>
                 <li><a href="#">
-                        <img src="images/youtube.jpg" alt="" />
+                        <img src="images/youtube.jpg" alt="youtube">
                     </a>
                 </li>
             </ul>
+
+            <h2 hidden> Betaal methodes </h2>
             <ul>
                 <li>
                     <a href="#">
-                        <img src="images/ideal.jpg" alt="" />
+                        <img src="images/ideal.jpg" alt="ideal">
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="images/mastercard.jpg" alt="" />
+                        <img src="images/mastercard.jpg" alt="mastercard">
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="images/visa.jpg" alt="" />
+                        <img src="images/visa.jpg" alt="visa">
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="images/klarna.jpg" alt="" />
+                        <img src="images/klarna.jpg" alt="klarna">
                     </a>
                 </li>
             </ul>
@@ -423,16 +567,23 @@
 
         <!-- section 4 / land & taal wijzigen -->
         <section>
-            <a href="#">Wijzig land</a>
-            <button type="show">
+            <h2 hidden> Land of taal wijzigen </h2>
+            <a href="#">
+                <img src="images/landWijzigenIcon.png" alt="land wijzigen">
+                Wijzig land
+            </a>
+
+            <button type="button">
                 Nederlands
+                <img src="images/dropdownButton.png" alt="dropdown button">
             </button>
 
         </section>
 
+
     </footer>
 
-    <script defer src="scripts/script.js"></script>
+    <script defer src="scripts/scriptProduct.js"></script>
 </body>
 
 </html>

@@ -16,33 +16,55 @@
 
 	<header>
 
-		<h1 hidden>IKEA Nederland | Home</h1>
+		<h1 hidden>IKEA Nederland | Home pagina</h1>
 
-		<!-- Ikea logo -->
-		<a href="index.html">
-			<img src="images/ikealogo.svg" alt="Ikea logo">
+		<!-- Link bovenin de pagina -->
+		<a href="">
+			<img src="images/retourIcon.png" alt="pijl in de vorm van een hart">
+			365 dagen retourneren!
 		</a>
-		<nav>
+
+		<!-- Navigatie balk -->
+		<nav class="navbar">
+			<!-- Ikea logo -->
+			<a href="index.html">
+				<img src="images/ikealogo.svg" alt="Ikea logo">
+			</a>
 			<ul>
-				<li><a href=#>
+				<li>
+					<a href=#>
 						<img src="images/accounticon.png" alt="account">
-					</a></li>
-				<li><a href=#>
+					</a>
+				</li>
+
+				<li>
+					<a href=#>
 						<img src="images/favoicon.png" alt="favorieten">
-					</a></li>
-				<li><a href=#>
+					</a>
+				</li>
+
+				<li>
+					<a href=#>
 						<img src="images/winkelmandicon.png" alt="winkelwagen">
-					</a></li>
-				<li><a href="#">
+					</a>
+				</li>
+
+				<li>
+					<a href="#">
 						<img src="images/hamburgericon.png" alt="hamburger menu">
-					</a></li>
+					</a>
+				</li>
 			</ul>
 		</nav>
 
 		<!-- zoekbalk -->
 		<form role="search" action="#">
+			<img src="images/vergrootglasIcon.png" alt="vergrootglas">
 			<input type="search" name="search" placeholder="Waar ben je naar op zoek?" autocomplete="off"
 				aria-label="zoeken">
+			<button type="button">
+				<img src="images/cameraIcon.png" alt="camera icon">
+			</button>
 		</form>
 
 	</header>
@@ -55,9 +77,11 @@
 				<img src="images/leveringIcon.jpg" alt="vrachtwagen icon">
 				Vul je postcode in
 			</button>
+
 			<button type="button">
 				<img src="images/winkelIcon.jpg" alt="winkel icon">
-				Amsterdam</button>
+				Amsterdam
+			</button>
 		</p>
 
 		<!-- section 1 / inleidings tekstje -->
@@ -81,10 +105,10 @@
 			<ul>
 				<li>
 					<a href="product.html">
-						<img src="images/pokal.jpg" alt="POKAL glas">
-						<h3>POKAL</h3>
-						<p>Glas</p>
-						<h3>€0.79</h3>
+						<img src="images/kast1.jpeg" alt="SONGESAND Kast">
+						<h3>SONGESAND</h3>
+						<p>Kledingkast</p>
+						<h3>€279</h3>
 					</a>
 				</li>
 
@@ -157,9 +181,8 @@
 							cngcv
 							jfydjcfgn fjcjn</p>
 
-						<a href="#">
-							<img src="images/pijlRechts.jpg" alt="pijl naar rechts">
-						</a>
+
+						<img src="images/pijlRechts.jpg" alt="pijl naar rechts">
 					</a>
 				</li>
 				<li>
@@ -169,9 +192,9 @@
 						<p>ghlvghkmv hyjfcm jhfcfkr drykfgh mvghrzjyshfdcr yktfmvc fjktufjvhgc fdku tftjghmcv fcjhg
 							cngcv
 							jfydjcfgn fjcjn</p>
-						<a href="#">
-							<img src="images/pijlRechts.jpg" alt="pijl naar rechts">
-						</a>
+
+						<img src="images/pijlRechts.jpg" alt="pijl naar rechts">
+
 					</a>
 				</li>
 				<li>
@@ -181,9 +204,9 @@
 						<p>ghlvghkmv hyjfcmj hfcfkrdry kfghmv ghrzjy shfdc ryktfmvc fjkt ufjvhgc fdku tftjghmcv fcjhg
 							cngcv
 							jfydjcfgn fjcjn</p>
-						<a href="#">
-							<img src="images/pijlRechts.jpg" alt="pijl naar rechts">
-						</a>
+
+						<img src="images/pijlRechts.jpg" alt="pijl naar rechts">
+
 					</a>
 				</li>
 			</ul>
@@ -274,21 +297,25 @@
 		<section class="bezorgInfo">
 			<ul>
 				<li>
+					<img src="images/ophalenIcon.jpg" alt="ophalen icon">
 					<h3>Bestellen & ophalen</h3>
 					<p>Bestel online en haal op in de winkel</p>
 					<a href="#">Lees meer</a>
 				</li>
 				<li>
+					<img src="images/bezorgIcon.jpg" alt="bezorg icon">
 					<h3>Bezorgservice</h3>
 					<p>We bezorgen je bestelling bij je thuis.</p>
 					<a href="#">Lees meer</a>
 				</li>
 				<li>
+					<img src="images/klantenserviceIcon.jpg" alt="klantenservice icon">
 					<h3>Klantenservice</h3>
 					<p>Vind het antwoord op je vraag</p>
 					<a href="#">Lees meer</a>
 				</li>
 				<li>
+					<img src="images/adviesIcon.jpg" alt="advies icon">
 					<h3>Persoonlijk advies</h3>
 					<p>Onze experts helpen je met jouw droominterieur of -meubel.</p>
 					<a href="#">Lees meer</a>
@@ -358,31 +385,44 @@
 					<button type="button">
 						<img src="images/inspiratie1.jpg" alt="bureau met lade kast en ronde spiegel">
 					</button>
+					<img class="favoIcon" src="images/favoIconDark.jpg" alt="hartje">
 				</li>
 				<li>
 					<button type="button">
 						<img src="images/inspiratie2.jpg" alt="kast">
 					</button>
+					<img class="favoIcon" src="images/favoIconDark.jpg" alt="hartje">
 				</li>
 				<li>
 					<button type="button">
 						<img src="images/inspiratie3.jpg" alt="monitor standaard met la en spulletjes erin">
 					</button>
+					<img class="favoIcon" src="images/favoIconDark.jpg" alt="hartje">
 				</li>
 				<li>
 					<button type="button">
 						<img src="images/inspiratie4.jpg" alt="kast">
 					</button>
+					<img class="favoIcon" src="images/favoIconDark.jpg" alt="hartje">
 				</li>
 				<li>
 					<button type="button">
 						<img src="images/inspiratie5.jpg" alt="stoel met gordijnen er om heen">
 					</button>
+					<img class="favoIcon" src="images/favoIconDark.jpg" alt="hartje">
 				</li>
 			</ul>
+
+			<button type="button">
+				Laad 6 meer
+			</button>
 		</section>
 
-		<button type="button">^</button>
+		<button id="terugNaarBoven" class="terugNaarBoven" type="button">Terug naar boven</button>
+
+		<button class="chat" type="button">
+			<img src="images/chatIcon.jpg" alt="chat">
+		</button>
 
 	</main>
 
@@ -402,23 +442,31 @@
 		<section>
 			<ul>
 				<li>
+					<h2 hidden> Klantenservice </h2>
 					<button type="button">
 						Klantenservice
+						<img src="images/dropdownButton.png" alt="dropdown">
 					</button>
 				</li>
 				<li>
+					<h2 hidden> Over IKEA </h2>
 					<button type="button">
 						Over IKEA
+						<img src="images/dropdownButton.png" alt="dropdown">
 					</button>
 				</li>
 				<li>
+					<h2 hidden> Winkelen bij IKEA </h2>
 					<button type="button">
 						Winkelen bij IKEA
+						<img src="images/dropdownButton.png" alt="dropdown">
 					</button>
 				</li>
 				<li>
+					<h2 hidden> IKEA Family & Business</h2>
 					<button type="button">
 						IKEA Family & Business
+						<img src="images/dropdownButton.png" alt="dropdown">
 					</button>
 				</li>
 			</ul>
@@ -426,6 +474,7 @@
 
 		<!-- section 3 / icoontjes -->
 		<section>
+			<h2 hidden> Social media </h2>
 			<ul>
 				<li><a href=#>
 						<img src="images/facebook.jpg" alt="facebook">
@@ -444,6 +493,8 @@
 					</a>
 				</li>
 			</ul>
+
+			<h2 hidden> Betaal methodes </h2>
 			<ul>
 				<li>
 					<a href="#">
@@ -470,9 +521,15 @@
 
 		<!-- section 4 / land & taal wijzigen -->
 		<section>
-			<a href="#">Wijzig land</a>
+			<h2 hidden> Land of taal wijzigen </h2>
+			<a href="#">
+				<img src="images/landWijzigenIcon.png" alt="land wijzigen">
+				Wijzig land
+			</a>
+
 			<button type="button">
 				Nederlands
+				<img src="images/dropdownButton.png" alt="dropdown button">
 			</button>
 
 		</section>

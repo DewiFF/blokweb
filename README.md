@@ -207,10 +207,10 @@ Het lastigste vind ik om de lay-out goed te krijgen. Ik merk dat ik zowel flex a
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Dingen die vaker terug komen in styling meer algemeen stylen
+  - specifieker dingen in css oproepen
+  - de a's titels geven
+  - horizontaal scrollen omzetten in carousel 
 
 </details>
 

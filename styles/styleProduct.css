@@ -24,9 +24,14 @@
     --color-border-gray: rgb(223, 223, 223);
 
     --ikea-font: 'Noto Sans', 'Roboto', 'Open Sans';
-    --font-weight-headings: 700;
     --font-size-main-text: 0.875rem;
+    --font-size-small-text: 0.75rem;
+    --font-weight-headings: 700;
     --font-size-price: 1.75rem;
+    --font-size-headings: 1rem;
+    --font-size-large-text: 1.25rem;
+
+    --border-width: 0.1em;
 }
 
 
@@ -35,11 +40,14 @@
 /****************/
 
 body {
+    position: relative;
     margin: 0;
     padding: 0;
     border: 0;
+    position: relative;
     color: var(--color-text);
     font-family: var(--ikea-font);
+    font-size: var(--font-size-main-text);
 }
 
 
@@ -47,170 +55,285 @@ body {
 /* HEADER */
 /****************/
 header {
-    margin: 20px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, min-content);
+    row-gap: 1em;
 }
 
-/* logo */
+/* link bovenin */
 header a:first-of-type {
-    grid-area: 1 / 1 / 2 / 2;
+    grid-area: 1 / 1 / 2 / 3;
+    height: 3.125em;
+    background-color: var(--color-background-buttons-black);
+    color: var(--color-text-on-dark-background);
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    column-gap: 1em;
 }
 
-/* iconen rechts bovenin */
-header ul {
+header a:first-of-type img {
+    max-height: 100%;
+    width: auto;
+}
+
+/* navigatie balk */
+header nav {
+    z-index: 2;
+    grid-area: 2 / 1 / 3 / 3;
+    padding: 1.25em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-background);
+    width: 100%;
+    height: 6em;
+}
+
+/* navigatie sticky maken met hulp van bron: https://www.youtube.com/watch?v=hPrXq9HLnrk&t=4s */
+header nav:not(.sticky) {
+    position: absolute;
+    top: 3em;
+}
+
+header nav.sticky {
+    position: fixed;
+    top: 0;
+}
+
+header nav a:first-of-type img {
+    max-height: 2.5em;
+    width: auto;
+}
+
+header nav ul {
     display: flex;
     justify-content: flex-end;
     list-style: none;
+    column-gap: 1em;
 }
 
-nav {
-    grid-area: 1 / 4 / 2 / 5;
+header nav a:first-of-type {
+    background-color: transparent;
+    padding: 0;
 }
 
-nav img {
-    padding-left: 1em;
-    max-width: 40px;
+header nav ul li a:first-of-type img {
+    max-height: 1.5em;
+    width: auto;
 }
 
 /* zoekbalk */
 header form {
-    grid-area: 2 / 1 / 2 / 5;
+    grid-area: 3 / 1 / 4 / 3;
+    margin: 4em 1.25em 0 1.25em;
+    padding: .5em 1em .5em 1em;
+    display: flex;
+    align-items: center;
+    border-radius: 5em;
+    border-style: none;
+    background-color: var(--color-background-gray);
+}
+
+header form img {
+    width: 1.5em;
+    height: auto;
 }
 
 header input {
     width: 100%;
-    height: 50px;
     padding: 1em;
-    border-radius: 2em;
-    border-style: none;
+    max-height: 3.125em;
     background-color: var(--color-background-gray);
+    border: 0;
+}
+
+header button {
+    border: 0;
+    background-color: transparent;
 }
 
 /****************/
 /* MAIN */
 /****************/
+main {
+    margin: 0 1.25em 1.25em 1.25em;
+}
+
+main section {
+    margin-top: 3em;
+}
 
 /* knoppen postcode en winkel locatie */
 .actions {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    height: 56px;
-    margin: 16px;
+    height: 3.5em;
 }
 
-main button {
+.actions button {
     background-color: var(--color-background);
-    border-style: solid;
-    border-color: var(--color-border-gray);
-    border-width: 0.1em;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    text-align: left;
+    border: solid var(--color-border-gray);
+    border-width: 0 0 var(--border-width) 0;
+    display: flex;
+    align-items: center;
 }
 
-main button:nth-of-type(2) {
+.actions button:nth-of-type(2) {
+    border-radius: 0;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+}
+
+.actions img {
+    width: 1.5em;
+    margin-right: .5em;
 }
 
 /* breadcrumbs */
-main nav ul:first-of-type {
+main nav {
+    padding: 0;
+}
+
+main nav ul {
     align-items: center;
     display: flex;
     list-style: none;
-    padding-left: 1em;
-}
-
-main nav ul:first-of-type li {
-    padding-right: .5em;
+    padding: 0;
+    column-gap: .2em;
 }
 
 main nav ul:first-of-type li a {
     text-decoration-line: underline;
     color: var(--color-text-blue);
+    font-size: var(--font-size-small-text);
 }
 
-/* afbeeldingen */
-.afbeeldingen img {
-    width: 23.5em;
-    height: auto;
-}
-
-.afbeeldingen ul {
-    display: flex;
-    overflow-x: scroll;
+/* afbeeldingen (carousel gemaakt met hulp van bron: https://www.youtube.com/watch?v=vnQNb9fXP9o ) */
+.afbeeldingen ul:first-of-type {
     padding: 0;
+    width: 100%;
+    height: auto;
+    overflow-y: hidden;
+    overflow-x: auto;
+    display: flex;
     list-style: none;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.afbeeldingen ul:first-of-type li img {
+    max-width: 100vw;
+    height: auto;
+    scroll-snap-align: start;
+}
+
+.afbeeldingen ul:last-of-type {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    column-gap: 1em;
+}
+
+.afbeeldingen ul:last-of-type li a img {
+    border-radius: 3em;
+    max-width: 1em;
 }
 
 /* product info */
-.productInfo {
-    margin: 1.25em;
+.productInfo ul {
     display: grid;
-    grid-template-columns: min-content 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(5, min-content);
+    list-style: none;
+    padding: 0;
 }
 
-.productInfo h1 {
-    margin: 0;
-    color: var(--color-text-headings);
-    grid-area: 1 / 1 / 2 / 3;
+.productInfo ul li {
+    display: flex;
+}
+
+.productInfo ul li:last-of-type {
+    align-items: center;
+    column-gap: .5em;
 }
 
 .productInfo h2 {
     margin: 0;
     font-size: var(--font-size-main-text);
-    grid-area: 2 / 1 / 3 / 2;
 }
 
-.productInfo button:first-of-type {
-    grid-area: 2 / 2 / 3 / 3;
+.productInfo li:nth-of-type(2) button {
+    border: 0;
+    text-decoration: underline;
+    color: var(--color-text-blue);
+    background-color: transparent;
 }
 
-.productInfo p:first-of-type {
-    grid-area: 3 / 1/ 4 / 3;
-    font-size: var(--font-size-price);
+.productInfo li:first-of-type h1 {
+    font-size: var(--font-size-headings);
+    color: var(--color-text-headings);
+    font-weight: var(--font-weight-headings);
     margin: 0;
 }
 
-.productInfo button:last-of-type {
-    grid-area: 4 / 1 / 5 / 2;
+.productInfo li:nth-of-type(4) button {
+    border: 0;
+    padding: 0;
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    max-height: 2em;
+    column-gap: .5em;
+    background-color: transparent;
 }
 
-.productInfo img:last-of-type {
+.productInfo button:last-of-type img {
     height: 1.5em;
     width: auto;
-    grid-area: 5 / 1 / 6 / 2;
 }
 
-.productInfo p:last-of-type {
-    grid-area: 5 / 2 / 6 / 3;
-    font-size: var(--font-size-main-text);
-
+.productInfo button:last-of-type p {
+    padding: 0;
 }
 
-.productInfo button img {
-    height: 1.5em;
-    width: auto;
+.productInfo li:nth-of-type(3) {
+    font-size: var(--font-size-price);
+    font-weight: var(--font-weight-headings);
+    color: var(--color-text-headings);
+    margin-top: .2em;
+}
+
+.productInfo li:nth-of-type(3) p {
+    margin: 0;
+}
+
+.productInfo li:last-of-type img {
+    max-height: 1em;
+}
+
+.productInfo li:last-of-type p {
+    font-size: var(--font-size-small-text);
 }
 
 /* Hoe kom je eraan? */
 .hoeKomJeEraan {
-    padding: 1.25em;
+    margin-top: 1.5em;
 }
 
 .hoeKomJeEraan h2 {
     color: var(--color-text-headings);
+    font-size: var(--font-size-main-text);
+    font-weight: var(--font-weight-headings);
 }
 
 .hoeKomJeEraan h3 {
     color: var(--color-text-headings);
+    font-size: var(--font-size-main-text);
+    font-weight: var(--font-weight-headings);
 }
 
 .hoeKomJeEraan ul {
@@ -233,6 +356,7 @@ main nav ul:first-of-type li a {
     grid-template-columns: 1.5em 1fr 1.5em;
     grid-template-rows: 2fr;
     color: var(--color-text);
+    font-size: var(--font-size-main-text);
     text-decoration: none;
 }
 
@@ -249,223 +373,359 @@ main nav ul:first-of-type li a {
 
 .hoeKomJeEraan p:first-of-type {
     grid-area: 2 / 2 / 3 / 3;
+    margin-top: .2em;
 }
 
 .hoeKomJeEraan p:last-of-type {
     grid-area: 1 / 3 / 3 / 4;
+    margin-top: .2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Aantal selecteren */
+.aantalSelecteren {
+    margin-top: 2em;
+    width: 100%;
+    padding: 1em;
+    background-color: var(--color-background);
+    border: var(--border-width) solid var(--color-border-gray);
+    border-radius: 4em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.aantalSelecteren button {
+    background-color: transparent;
+    border: 0;
+    font-size: var(--font-size-large-text);
+    font-weight: var(--font-weight-headings);
+}
+
+.aantalSelecteren input {
+    border: 0;
+    text-align: center;
+    font-size: var(--font-size-large-text);
+    font-weight: var(--font-weight-headings);
 }
 
 /* Toevoegen aan winkelwagen */
 .toevoegenWinkelwagen {
-    display: flex;
-    justify-content: center;
+    z-index: 1;
+    margin-top: 1em;
 }
 
 .toevoegenWinkelwagen button {
     width: 100%;
+    height: 4.2em;
     text-decoration: none;
     padding: 1em;
-    margin: 1.25em;
     background-color: var(--color-buttons-blue);
     color: var(--color-text-on-dark-background);
+    font-weight: var(--font-weight-headings);
+    border: 0;
     border-radius: 4em;
-    display: flex;
-    justify-content: center;
+}
+
+.toevoegenWinkelwagen:not(.sticky) {
+    position: relative;
+}
+
+.toevoegenWinkelwagen.sticky {
+    position: fixed;
+    bottom: 1.25em;
+    left: 1.25em;
+    right: 1.25em;
 }
 
 /* Over het product */
-.overProduct {
-    margin: 1.25em;
+.overProduct p:first-of-type {
+    font-size: var(--font-size-large-text);
+    line-height: 1.6em;
+}
+
+.overProduct h4 {
+    font-size: var(--font-size-small-text);
+    margin-bottom: .5em;
 }
 
 .overProduct p:last-of-type {
     color: var(--color-text-on-dark-background);
     background-color: var(--color-background-buttons-black);
-    border-width: 0.06em;
-    border-style: solid;
-    border-color: var(--color-background-buttons-black);
-    padding-left: 0.7em;
-    padding-right: 0.7em;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
+    padding: 0.2em 0.7em 0.2em 0.7em;
     width: fit-content;
+    margin: 0;
 }
 
 /* Meer info over product (buttons) */
 .meerInfo ul {
-    padding: 1.25em;
+    padding: 0;
 }
 
 .meerInfo li {
     list-style: none;
-    border-top: 0.06em;
-    border-color: var(--color-border-gray);
     border-style: solid;
+    border-color: var(--color-background-gray);
+    border-width: var(--border-width) 0 var(--border-width) 0;
 }
 
 .meerInfo button {
-    display: grid;
-    grid-template-columns: 1fr 1em;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
+    background-color: transparent;
+    border: 0;
 }
 
-.meerInfo img:last-of-type {
+.meerInfo li:last-of-type button {
+    display: grid;
+    grid-template-columns: repeat(2, min-content);
+    grid-template-rows: repeat(2, min-content);
+}
+
+.meerInfo li:last-of-type button h3 {
+    grid-area: 1 / 1 / 2 / 2;
+    text-align: left;
+    margin: 0;
+    padding: 1em 0 0 0;
+}
+
+.meerInfo li:last-of-type button p {
+    grid-area: 2 / 1 / 3 / 2;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0 0 1em 0;
+}
+
+.meerInfo li:last-of-type button p img {
     width: 5.7em;
     height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.meerInfo li:last-of-type button img {
+    width: 1em;
+    margin: 1em 0 1em 0;
+    height: auto;
+    grid-area: 1 / 2 / 3 / 3;
 }
 
 .meerInfo img:first-of-type {
     width: 1em;
     padding-top: 1.25em;
     height: auto;
-    grid-area: 1/ 2 / 2 / 3;
 }
 
 /* soortgelijke producten */
-.soortgelijkeProducten {
-    margin: 1.25em;
-    margin-bottom: 2.5em;
-}
-
 .soortgelijkeProducten h2 {
     color: var(--color-text-headings);
+    font-size: var(--font-size-headings);
+    font-weight: var(--font-weight-headings);
 }
 
 .soortgelijkeProducten ul {
     display: flex;
-    column-gap: 0.625em;
+    column-gap: 2em;
     overflow-x: scroll;
     padding: 0;
+    list-style: none;
 }
 
-.soortgelijkeProducten li {
+.soortgelijkeProducten ul li {
+    flex: 0 0 35%;
     display: grid;
-    grid-template-columns: repeat(2, min-content);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, min-content);
 }
 
-.soortgelijkeProducten a {
-    display: grid;
-    grid-template-columns: repeat(2, min-content);
-    grid-template-rows: repeat(5, min-content);
-    width: 8.4em;
+.soortgelijkeProducten ul li a {
     grid-area: 1 / 1 / 2 / 3;
-    color: var(--color-text);
+    display: grid;
+    grid-template-rows: repeat(5, min-content);
     text-decoration: none;
 }
 
-.soortgelijkeProducten a img:first-of-type {
+.soortgelijkeProducten ul li a img {
     width: 100%;
     height: auto;
-    grid-area: 1 / 1 / 2 / 3;
 }
 
-.soortgelijkeProducten h3:first-of-type {
-    grid-area: 2 / 1 / 3 / 3;
-    margin-bottom: 0;
+.soortgelijkeProducten ul li a h3:first-of-type {
     color: var(--color-text-headings);
+    margin: 1em 0 0 0;
 }
 
-.soortgelijkeProducten p:first-of-type {
-    grid-area: 3 / 1 / 4 / 3;
+.soortgelijkeProducten ul li a p:first-of-type {
+    color: var(--color-text);
     margin: 0;
 }
 
-.soortgelijkeProducten h3:last-of-type {
-    grid-area: 4 / 1 / 5 / 3;
+.soortgelijkeProducten ul li a h3:last-of-type {
     color: var(--color-text-headings);
+    font-size: var(--font-size-price);
+    margin: .2em 0 0 0;
 }
 
-
-.soortgelijkeProducten a img:last-of-type {
-    width: 5.7em;
-    height: auto;
-    grid-area: 5 / 1 / 6 / 2;
+.soortgelijkeProducten ul li a p:last-of-type {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    column-gap: .5em;
+    color: var(--color-text);
 }
 
-.soortgelijkeProducten p:last-of-type {
-    grid-area: 5 / 2 / 6 / 3;
-    margin-top: 0;
-}
-
-.soortgelijkeProducten button:first-of-type img {
-    width: 3em;
-    border-style: solid;
-    border-width: .5em;
-    border-radius: 2em;
-    border-color: var(--color-buttons-blue);
+.soortgelijkeProducten ul li button:first-of-type {
     grid-area: 2 / 1 / 3 / 2;
+    background-color: transparent;
+    border: 0;
+    width: 2em;
+    padding: 0;
 }
 
-.soortgelijkeProducten button:last-of-type img {
-    width: 2em;
+.soortgelijkeProducten ul li button:first-of-type img {
+    width: 100%;
+    border-radius: 2em;
+}
+
+.soortgelijkeProducten ul li button:last-of-type {
     grid-area: 2 / 2 / 3 / 3;
+    background-color: transparent;
+    border: 0;
+    width: 2em;
+    padding: 0;
+}
+
+.soortgelijkeProducten ul li button:last-of-type img {
+    width: 100%;
 }
 
 /* verhaal */
+.verhaal {
+    margin: 5em -1.25em -2em -1.25em;
+}
+
+.verhaal h2 {
+    color: var(--color-text);
+    font-size: var(--font-size-small-text);
+}
+
 .verhaal h3 {
     color: var(--color-text-headings);
+    font-size: var(--font-size-large-text);
+    font-weight: var(--font-weight-headings);
+}
+
+.verhaal p {
+    color: var(--color-text);
+    font-size: var(--font-size-main-text);
 }
 
 .verhaal img {
-    max-width: 100%;
+    width: 100%;
 }
 
 .verhaal article {
     margin: 1.25em;
     padding: 2em;
-    background-color: white;
+    background-color: var(--color-background);
     position: relative;
-    bottom: 6em;
+    bottom: 5em;
     border-width: 0;
-    border-bottom: .1em;
+    border-bottom: var(--border-width);
     border-style: solid;
     border-color: var(--color-border-gray);
+}
+
+.verhaal button {
+    color: var(--color-text-blue);
+    background-color: transparent;
+    border: 0;
+    text-decoration: underline;
+    padding: 0;
 }
 
 /* materiaal */
 .materiaal {
-    margin: 1.25em;
+    padding: 0 0 4em 0;
     border-width: 0;
-    border-bottom: .1em;
+    border-bottom: var(--border-width);
     border-style: solid;
     border-color: var(--color-border-gray);
 }
 
+.materiaal h2 {
+    color: var(--color-text);
+    font-size: var(--font-size-small-text);
+}
+
 .materiaal h3 {
-    color: var(--color-text-headingsP);
+    color: var(--color-text-headings);
+    font-size: var(--font-size-large-text);
+    font-weight: var(--font-weight-headings);
+}
+
+.materiaal p {
+    color: var(--color-text);
+    font-size: var(--font-size-main-text);
 }
 
 /* Gezien in */
-.gezienIn {
-    margin: 1.25em;
+.gezienIn h2 {
+    color: var(--color-text-headings);
+    font-size: var(--font-size-headings);
+    font-weight: var(--font-weight-headings);
+    margin-bottom: 2em;
 }
 
 .gezienIn img {
-    width: 10.1em;
+    width: 45%;
+    height: auto;
 }
 
 /* Je laatst bekeken producten */
 .laatstBekeken {
-    margin: 1.25em;
+    margin-bottom: 3em;
+}
+
+.laatstBekeken h2 {
+    color: var(--color-text-headings);
+    font-size: var(--font-size-headings);
+    font-weight: var(--font-weight-headings);
+    padding-bottom: 1em;
 }
 
 .laatstBekeken ul {
     padding: 0;
     display: flex;
     overflow-x: scroll;
-
+    column-gap: 1em;
 }
 
 .laatstBekeken li {
     list-style: none;
+    width: 100%;
 }
 
 .laatstBekeken img {
-    width: 3.7em;
+    width: 100%;
 }
 
 
+
+/* Button terug naar boven */
+.terugNaarBoven {
+    border-radius: 3.5em;
+    border: 0;
+    color: var(--color-text-headings);
+    font-weight: bold;
+    padding: 1em;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
 /****************/
 /* FOOTER */
@@ -473,21 +733,24 @@ main nav ul:first-of-type li a {
 
 footer {
     background-color: var(--color-background-gray);
-    padding: 20px;
+    padding: 1.5em;
+    padding-top: 5em;
 }
 
 /* word IKEA family lid */
 footer section:first-of-type h3 {
     color: var(--color-text-headings);
+    font-weight: bold;
 }
 
 footer section:first-of-type a {
     display: flex;
     align-items: flex-start;
-    color: var(--color-text);
+    color: var(--color-text-blue);
 }
 
 footer section:first-of-type a:last-of-type {
+    font-weight: bold;
     text-decoration: none;
     padding: 1em;
     margin-top: 1em;
@@ -499,7 +762,6 @@ footer section:first-of-type a:last-of-type {
 }
 
 /* dropdown */
-
 footer section:nth-of-type(2) ul {
     list-style: none;
     padding: 0;
@@ -513,23 +775,30 @@ footer section:nth-of-type(2) li {
     border-color: var(--color-border-gray);
     border-left: 0;
     border-right: 0;
-
 }
 
 footer section:nth-of-type(2) button {
+    width: 100%;
     background-color: var(--color-background-gray);
-    font-size: .875em;
-    padding: 2em;
-    padding-left: 0;
+    padding: 2em 0 2em 0;
     border-width: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--font-size-main-text);
+    font-weight: bold;
+}
+
+footer section:nth-of-type(2) img {
+    width: 1.5em;
 }
 
 /* icoontjes */
-
 footer section:nth-of-type(3) ul {
     list-style: none;
     display: flex;
-    padding: 0;
+    column-gap: 1em;
+    padding: 2em 0 0 0;
 }
 
 footer section:nth-of-type(3) li {
@@ -538,6 +807,44 @@ footer section:nth-of-type(3) li {
 
 footer section:nth-of-type(3) img {
     width: 1.5em;
+}
+
+/* land en taal wijzigen */
+footer section:nth-of-type(4) {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 1em;
+    align-items: center;
+    margin: 2em 0 5em 0;
+}
+
+footer section:nth-of-type(4) img {
+    width: 1.5em;
+}
+
+footer section:nth-of-type(4) a {
+    border: .1em solid black;
+    border-radius: 3em;
+    padding: 1em;
+    color: var(--color-text-headings);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+    width: fit-content;
+}
+
+footer section:nth-of-type(4) button {
+    border: .1em solid black;
+    border-radius: 3em;
+    padding: 1em;
+    color: var(--color-text-headings);
+    background-color: transparent;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+    width: fit-content;
 }
 
 /*********************/
