@@ -257,8 +257,11 @@ Het lastigste vind ik om de lay-out goed te krijgen. Ik merk dat ik zowel flex a
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. https://www.youtube.com/watch?v=hPrXq9HLnrk&t=4s
+  2. https://chat.openai.com
+  3. https://www.youtube.com/watch?v=vnQNb9fXP9o
+  4. https://cssgrid-generator.netlify.app
+  5. https://developer.mozilla.org/en-US/ 
+  6. DLO oefeningen / hulp van docent & student-assistenten 
 
 </details>
