@@ -178,6 +178,11 @@ Het lastigste vind ik om de lay-out goed te krijgen. Ik merk dat ik zowel flex a
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  <img src="readme-images/wcag6.JPG" width="375px" alt="checklist">
+<img src="readme-images/wcag7.JPG" width="375px" alt="checklist">
+<img src="readme-images/wcag8.JPG" width="375px" alt="checklist">
+<img src="readme-images/wcag9.JPG" width="375px" alt="checklist">
+<img src="readme-images/wcag10.JPG" width="375px" alt="checklist">
 
 </details>
 
